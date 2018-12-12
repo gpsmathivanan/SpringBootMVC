@@ -1,0 +1,118 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link href="../static/css/custom.css" rel="stylesheet">
+<script src="../static/js/donordetails.js"></script>
+
+<style>
+</style>
+</head>
+<body>
+
+	<div style="background-image: url(bghome.jpg); height: 650px">
+
+		<div class="tab">
+			<button class="tablinks" onclick="openCity(event, 'Blood Donor')">Blood
+				Donor</button>
+			<button class="tablinks" onclick="openCity(event, 'Blood seeker')">Blood
+				seeker</button>
+			<button class="tablinks" onclick="openCity(event, 'Admin')">Admin</button>
+		</div>
+
+
+
+		<div id="Blood Donor"
+			style="color: red; background-size: 50% 50%; height: 90%; width: 100%"
+			class="tabcontent">
+			<h3>Blood Donation Form</h3>
+			<div align="center" style="height: 50%; width: 100%">
+				<table id="detailTable">
+					<tr>
+						<td>Donor's Name :</td>
+						<td><input type="text"  id="name"></td>
+					</tr>
+					<tr>
+						<td>Gender</td>
+						<td><input type="radio" name="gender" value="male">
+							Male <input type="radio" name="gender" value="female">
+							Female</td>
+					</tr>
+					<tr>
+						<td>Date of Birth :</td>
+						<td><input type="date" id="bday"  name="bday"></td>
+					</tr>
+					<tr>
+						<td>Phone :</td>
+						<td><input type="text" id="phone"></td>
+					</tr>
+					<tr>
+						<td>Home Address :</td>
+						<td><input type="text" id="address"></td>
+					</tr>
+					<tr>
+						<td>Blood Type :</td>
+						<td><select id="bloodgroup">
+								<option value="t1">O+</option>
+								<option value="t2">O-</option>
+								<option value="t3">A+</option>
+								<option value="t4">A-</option>
+								<option value="t5">B+</option>
+								<option value="t6">B-</option>
+								<option value="t7">AB+</option>
+								<option value="t8">AB-</option>
+						</select></td>
+					</tr>
+					<tr>
+						<td>Do you suffer of any diseases? :</td>
+						<td><input type="radio" name="diseases" value="Yes">
+							Yes <input type="radio" name="diseases" value="No">
+							No</td>
+					</tr>
+					<tr>
+						<td>Have you ever had positive Blood test for HbsAg, Hcv,
+							HIV? :</td>
+						<td><input type="radio" name="positiveBlood" value="Yes">
+							Yes <input type="radio" name="positiveBlood" value="No">
+							No</td>
+					</tr>
+					<tr>
+						<td>Do you have allergies?:</td>
+						<td><input type="radio" name="allergies" value="Yes">
+							Yes <input type="radio" name="allergies" value="No">
+							No</td>
+					</tr>
+
+				</table>
+
+
+
+				<button type="submit" id="addDonor">Submit</button>
+			</div>
+
+
+
+		</div>
+
+		<div id="Blood seeker" class="tabcontent">
+			<h3>Blood seeker</h3>
+			<p>Create Content Here</p>
+		</div>
+
+		<div id="Admin" class="tabcontent">
+			<h3>Admin</h3>
+			<p>Create Content Here</p>
+		</div>
+
+
+	</div>
+</body>
+</html>
+
