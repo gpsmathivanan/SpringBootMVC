@@ -3,28 +3,21 @@ $( document ).ready(function() {
 	
 
 	
-	$('#addDonor').click(function(){
-		
-		alert($("#name").val());
-		alert($("input[name='gender']:checked").val());
-		alert($("#bday").val());
-		alert($("#phone").val());
-		alert($("#address").val());
-		alert($( "#bloodgroup option:selected" ).text());
-		alert($("input[name='diseases']:checked").val());
-		alert($("input[name='positiveBlood']:checked").val());
-		alert($("input[name='allergies']:checked").val());
-		
-		
-		 donor = {
-				name : $("#name").val(),
-				age : $("#age").val(),
-				street : $("#street").val(),
-				postcode : $("#postcode").val()
+
+$('#addDonor').click(function() {
+		donor = {
+			name : $("#name").val(),
+			gender : $("input[name='gender']:checked").val(),
+			dateofBirth : $("#bday").val(),
+			phone : $("#phone").val(),
+			homeAddress : $("#address").val(),
+			bloodType : $("#bloodgroup option:selected").text(),
+			anydiseases : $("input[name='diseases']:checked").val(),
+			positiveBlood : $("input[name='positiveBlood']:checked").val(),
+			allergies : $("input[name='allergies']:checked").val()
 		}
 		ajaxPost();
 	});
-	
 
 })
 
