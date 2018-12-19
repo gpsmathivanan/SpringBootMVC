@@ -1,39 +1,36 @@
-var donor;
+var seeker;
 $(document).ready(function() {
-	$('#addDonor').click(function() {
-		donor = {
-			name : $("#name").val(),
-			gender : $("input[name='gender']:checked").val(),
-			dateofBirth : $("#bday").val(),
-			phone : $("#phone").val(),
-			homeAddress : $("#address").val(),
-			bloodType : $("#bloodgroup option:selected").text(),
-			anydiseases : $("input[name='diseases']:checked").val(),
-			positiveBlood : $("input[name='positiveBlood']:checked").val(),
-			allergies : $("input[name='allergies']:checked").val()
+	$('#addSeeker').click(function() {
+		seeker = {
+			name : $("#nameSeeker").val(),
+			gender : $("input[name='genderSeeker']:checked").val(),
+			tillRequiredDate : $("#tillDateSeeker").val(),
+			phone : $("#phoneSeeker").val(),
+			homeAddress : $("#addressSeeker").val(),
+			bloodType : $("#bloodgroupSeeker option:selected").text()
 		}
-		ajaxPost();
+		ajaxSeekerPost();
 	});
 
 })
-function ajaxPost() {
+
+function ajaxSeekerPost() {
+
 	$.ajax({
 		type : "POST",
 		contentType : "application/json",
 		accept : 'text/plain',
-		url : window.location + "api/bloodbank/donor",
-		data : JSON.stringify(donor),
+		url : window.location + "api/bloodbank/seeker",
+		data : JSON.stringify(seeker),
 		dataType : 'text',
 		success : function(result) {
 			alert("Details Inserted Successfully");
-			$("#name").val('');
+			$("#nameSeeker").val('');
 			$(".gender").prop('checked', false);
-			$("#bday").val('');
-			$("#phone").val('');
-			$("#address").val('');
-			$(".diseases").prop('checked', false);
-			$(".positiveBlood").prop('checked', false);
-			$(".allergies").prop('checked', false);
+			$("#tillDateSeeker").val('');
+			$("#phoneSeeker").val('');
+			$("#addressSeeker").val('');
+			$("#bloodgroupSeeker").removeAttr('selected');
 		},
 		error : function(e) {
 			console.log("ERROR: ", e);

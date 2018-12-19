@@ -11,7 +11,8 @@
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <link href="../css/custom.css" rel="stylesheet"/> 
 <script src="/js/donordetails.js"></script>
-
+<script src="/js/seekerdetails.js"></script>
+<script src="/js/admindetails.js"></script>
 </head>
 <body>
 
@@ -32,31 +33,30 @@
 			class="tabcontent">
 			<h3>Blood Donation Form</h3>
 			<div align="center" style="height: 50%; width: 100%">
-				<table id="detailTable">
+				<table class="detailTable" style= "width: 55%">
 					<tr>
-						<td>Donor's Name :</td>
-						<td><input type="text"  id="name"/></td>
+						<td><b>Donor's Name</b></td>
+						<td><input type="text" id="name" /></td>
 					</tr>
 					<tr>
-						<td>Gender</td>
-						<td><input type="radio" name="gender" value="male"/>
-							Male <input type="radio" name="gender" value="female"/>
-							Female</td>
+						<td><b>Gender</b></td>
+						<td><input type="radio" class="gender" name="gender" value="male" /> Male <input
+							type="radio" class="gender" name="gender" value="female" /> Female</td>
 					</tr>
 					<tr>
-						<td>Date of Birth :</td>
-						<td><input type="date" id="bday"  name="bday"/></td>
+						<td><b>Date of Donation</b></td>
+						<td><input type="date" id="bday" name="bday" /></td>
 					</tr>
 					<tr>
-						<td>Phone :</td>
-						<td><input type="text" id="phone"/></td>
+						<td><b>Phone No</b></td>
+						<td><input type="text" id="phone" /></td>
 					</tr>
 					<tr>
-						<td>Home Address :</td>
-						<td><input type="text" id="address"/></td>
+						<td><b>Address</b></td>
+						<td><input type="text" id="address" /></td>
 					</tr>
 					<tr>
-						<td>Blood Type :</td>
+						<td><b>Blood Type</b></td>
 						<td><select id="bloodgroup">
 								<option value="t1">O+</option>
 								<option value="t2">O-</option>
@@ -69,29 +69,23 @@
 						</select></td>
 					</tr>
 					<tr>
-						<td>Do you suffer of any diseases? :</td>
-						<td><input type="radio" name="diseases" value="Yes"/>
-							Yes <input type="radio" name="diseases" value="No"/>
-							No</td>
+						<td><b>Do you suffer of any diseases?</b></td>
+						<td><input type="radio" class="diseases" name="diseases" value="Yes" /> Yes <input
+							type="radio" class="diseases" name="diseases" value="No" /> No</td>
 					</tr>
 					<tr>
-						<td>Have you ever had positive Blood test for HbsAg, Hcv,
-							HIV? :</td>
-						<td><input type="radio" name="positiveBlood" value="Yes"/>
-							Yes <input type="radio" name="positiveBlood" value="No"/>
-							No</td>
+						<td><b>Have you ever had positive Blood test for HbsAg, Hcv,
+							HIV?</b></td>
+						<td><input type="radio" class="positiveBlood" name="positiveBlood" value="Yes" />
+							Yes <input type="radio" class="positiveBlood" name="positiveBlood" value="No" /> No</td>
 					</tr>
 					<tr>
-						<td>Do you have allergies?:</td>
-						<td><input type="radio" name="allergies" value="Yes"/>
-							Yes <input type="radio" name="allergies" value="No"/>
-							No</td>
+						<td><b>Do you have allergies?</b></td>
+						<td><input type="radio" class="allergies" name="allergies" value="Yes" /> Yes <input
+							type="radio" class="allergies"  name="allergies" value="No" /> No</td>
 					</tr>
 
 				</table>
-
-
-
 				<button type="submit" id="addDonor">Submit</button>
 			</div>
 
@@ -99,14 +93,77 @@
 
 		</div>
 
-		<div id="Blood seeker" class="tabcontent">
-			<h3>Blood seeker</h3>
-			<p>Create Content Here</p>
+		<div id="Blood seeker" class="tabcontent"
+			style="color: red; background-size: 50% 50%; height: 90%; width: 100%">
+			<h3>Blood Seeker Form</h3>
+			<div align="center" style="height: 50%; width: 100%">
+				<table class="detailTable" style= "width: 50%">
+					<tr>
+						<td><b>Seeker's Name</b></td>
+						<td><input type="text" id="nameSeeker" /></td>
+					</tr>
+					<tr>
+						<td><b>Gender</b></td>
+						<td><input type="radio" class="gender" name="genderSeeker" value="male" /> Male <input
+							type="radio" class="gender" name="genderSeeker" value="female" /> Female</td>
+					</tr>
+					<tr>
+						<td><b>Till Required Date</b></td>
+						<td><input type="date" id="tillDateSeeker" name="bday" /></td>
+					</tr>
+					<tr>
+						<td><b>Phone No</b></td>
+						<td><input type="text" id="phoneSeeker" /></td>
+					</tr>
+					<tr>
+						<td><b>Address</b></td>
+						<td><input type="text" id="addressSeeker" /></td>
+					</tr>
+					<tr>
+						<td><b>Blood Type</b></td>
+						<td><select id="bloodgroupSeeker">
+								<option value="t1">O+</option>
+								<option value="t2">O-</option>
+								<option value="t3">A+</option>
+								<option value="t4">A-</option>
+								<option value="t5">B+</option>
+								<option value="t6">B-</option>
+								<option value="t7">AB+</option>
+								<option value="t8">AB-</option>
+						</select></td>
+					</tr>
+				</table>
+				<button type="submit" id="addSeeker">Submit</button>
+			</div>
+
 		</div>
 
-		<div id="Admin" class="tabcontent">
+		<div id="Admin" class="tabcontent" style="color: red; background-size: 50% 50%; height: 90%; width: 100%">
 			<h3>Admin</h3>
-			<p>Create Content Here</p>
+				<div align="center" style="height: 50%; width: 100%">
+				<table class="detailTable" style= "width: 50%">
+					<tr>
+						<td><b>Search blood type and validity of the blood Details..</b></td>
+						<td><select id="searchdropdown">
+								<option value="opt1">Blood Type</option>
+								<option value="opt2">Blood Validity</option>
+						</select></td>
+						<td><select id="searchdropdown1">
+								<option value="t1">O+</option>
+								<option value="t2">O-</option>
+								<option value="t3">A+</option>
+								<option value="t4">A-</option>
+								<option value="t5">B+</option>
+								<option value="t6">B-</option>
+								<option value="t7">AB+</option>
+								<option value="t8">AB-</option>
+						</select></td>
+					</tr>
+					
+				</table><br></br><br></br>
+				<button type="submit" id="adminDetails">Submit</button><br></br><br></br>
+				<div id="tableDiv" align="center" style="height: 50%; width: 100%"></div>
+			</div>
 		</div>
 
 
