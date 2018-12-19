@@ -42,6 +42,35 @@ body {font-family: Arial;}
     background-color: #ccc;
 }
 
-#detailTable tr{
+.detailTable tr{
 	 height: 50px;
+}
+
+.detailTable td{
+	text-align: center;
+	 width: 50%;
+}
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#myTable th {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+  color:blue;
+}
+#myTable td {
+  border: 1px solid #dddddd;
+  text-align: center;
+  padding: 8px;
+}
+#myTable tr:nth-child(even) {
+  background-color: #FFB6C1;
+}
+#myTable tr:nth-child(odd) {
+  background-color: #F0E68C;
 }
