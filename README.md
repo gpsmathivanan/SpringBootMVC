@@ -25,7 +25,7 @@ ALTER TABLE donordetails
 ALTER TABLE donordetails CHANGE dateofBirth dateofdonation VARCHAR(100) NOT NULL;
 
 
-	CREATE TABLE seekerdetails (
+CREATE TABLE seekerdetails (
 		name VARCHAR(100) NOT NULL,
 		gender VARCHAR(100) NOT NULL,
 	   tillRequiredDate VARCHAR(100) NOT NULL,
@@ -35,6 +35,6 @@ ALTER TABLE donordetails CHANGE dateofBirth dateofdonation VARCHAR(100) NOT NULL
 	   row_cre_date DATETIME DEFAULT CURRENT_TIMESTAMP
 	);
 	
-	Select * from donordetails;
+Select * from donordetails;
 	
-	Select * from seekerdetails;
+Select * from seekerdetails;
